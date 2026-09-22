@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ganga Durga Prasad — freelance video editor specializing in Reels, Shorts, cinematic edits and promotional videos.">
+  <title>Ganga Durga Prasad — Video Editor</title>
+  <style>
+    :root{
+      --bg:#08090c; --card:#111318; --text:#f4f5f7; --muted:#a7acb7;
+      --line:rgba(255,255,255,.10); --accent:#d7ff54;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(8,9,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:-.03em}
+    .brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:.92rem}
+    .navlinks a:hover{color:var(--text)}
+    .hero{min-height:calc(100vh - 72px);display:grid;place-items:center;padding:90px 0 70px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(215,255,84,.07);filter:blur(80px);right:-180px;top:80px}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:18px}
+    h1{font-size:clamp(3.3rem,9vw,7.2rem);line-height:.91;letter-spacing:-.07em;max-width:900px}
+    .hero h1 em{font-style:normal;color:var(--accent)}
+    .lead{max-width:680px;color:var(--muted);font-size:1.12rem;margin:28px 0}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border:1px solid var(--line);border-radius:999px;font-weight:700}
+    .btn.primary{background:var(--accent);color:#101208;border-color:var(--accent)}
+    section{padding:95px 0}
+    .sectionhead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+    .sectionhead h2{font-size:clamp(2rem,5vw,3.7rem);letter-spacing:-.055em;line-height:1}
+    .sectionhead p{color:var(--muted);max-width:440px}
+    .workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .video{width:100%;aspect-ratio:16/10;display:block;background:#050505;object-fit:cover}
+    .projectbody{padding:22px}
+    .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:800}
+    .project h3{font-size:1.45rem;margin:6px 0}
+    .project p{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#12141a,#0d0f13)}
+    .num{color:var(--accent);font-weight:800}
+    .service h3{margin:30px 0 8px;font-size:1.2rem}
+    .service p{color:var(--muted);font-size:.94rem}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about h2{font-size:clamp(2.3rem,5vw,4.3rem);letter-spacing:-.06em;line-height:.98}
+    .about p{color:var(--muted);margin-top:18px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+    .step{padding:25px 20px 20px;border-right:1px solid var(--line)}
+    .step:last-child{border-right:0}
+    .step strong{font-size:1.1rem;display:block;margin:20px 0 6px}
+    .step p{color:var(--muted);font-size:.9rem}
+    .contact{border:1px solid var(--line);border-radius:28px;padding:55px;background:radial-gradient(circle at 85% 15%,rgba(215,255,84,.10),transparent 35%),#101218}
+    .contact h2{font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.06em;line-height:.95}
+    .contact p{color:var(--muted);max-width:600px;margin:18px 0 28px}
+    footer{padding:30px 0 45px;color:#777d88;font-size:.85rem;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .workgrid,.about{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .step:nth-child(2){border-right:0}
+    }
+    @media(max-width:520px){
+      section{padding:70px 0}
+      .services,.process{grid-template-columns:1fr}
+      .step{border-right:0;border-bottom:1px solid var(--line)}
+      .step:last-child{border-bottom:0}
+      .hero{padding-top:65px}
+      h1{font-size:3.5rem}
+      footer{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a class="brand" href="#">Ganga<span>.</span></a>
+    <div class="navlinks">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Freelance Video Editor</div>
+    <h1>Edits that make people <em>stop scrolling.</em></h1>
+    <p class="lead">I'm Ganga Durga Prasad. I create engaging Reels, Shorts, cinematic edits and promotional videos with clean pacing, captions, music sync and polished visual storytelling.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#work">View my work ↓</a>
+      <a class="btn" href="#contact">Work with me</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="work">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>Selected work</h2>
+      <p>A few edits that show my approach to pacing, transitions, music and visual storytelling.</p>
+    </div>
+    <div class="workgrid">
+      <article class="project">
+        <video class="video" controls preload="metadata">
+          <source src="assets/featured-edit-01.mp4" type="video/mp4">
+        </video>
+        <div class="projectbody"><div class="tag">Featured Edit 01</div><h3>Promotional / Social Edit</h3><p>Designed for attention, clean flow and social-first viewing.</p></div>
+      </article>
+      <article class="project">
+        <video class="video" controls preload="metadata">
+          <source src="assets/featured-edit-02.mp4" type="video/mp4">
+        </video>
+        <div class="projectbody"><div class="tag">Featured Edit 02</div><h3>Cinematic / Short-form Edit</h3><p>Focused on rhythm, visual continuity and a polished finish.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>What I edit</h2>
+      <p>Built for creators, brands and businesses that need content ready for social media.</p>
+    </div>
+    <div class="services">
+      <div class="service"><div class="num">01</div><h3>Reels & Shorts</h3><p>Fast-paced, retention-focused edits with captions, cuts, zooms, effects and music sync.</p></div>
+      <div class="service"><div class="num">02</div><h3>Promotional Videos</h3><p>Clean business and brand promos that communicate the key message quickly.</p></div>
+      <div class="service"><div class="num">03</div><h3>Cinematic Ads</h3><p>Premium visual treatment, smooth transitions, sound design and storytelling.</p></div>
+      <div class="service"><div class="num">04</div><h3>Captions & Motion</h3><p>Readable subtitles and motion elements that keep viewers engaged.</p></div>
+      <div class="service"><div class="num">05</div><h3>Music & Sound</h3><p>Beat-synced cuts, audio cleanup and sound choices that support the story.</p></div>
+      <div class="service"><div class="num">06</div><h3>Social Content</h3><p>Vertical content prepared for Instagram, YouTube Shorts and TikTok-style platforms.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div><div class="eyebrow">About me</div><h2>Creative edits. Clear communication. Reliable delivery.</h2></div>
+    <div>
+      <p>I'm Ganga Durga Prasad, a freelance video editor focused on turning raw footage into polished, engaging content.</p>
+      <p>I care about the details that make an edit feel professional — pacing, visual consistency, captions, transitions, music and the overall flow.</p>
+      <p>Whether you're a creator building a personal brand or a business promoting a product or service, I can adapt the editing style to your audience and goals.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sectionhead"><h2>My workflow</h2><p>A simple process from raw footage to final delivery.</p></div>
+    <div class="process">
+      <div class="step"><div class="num">01</div><strong>Brief</strong><p>Understand your content, audience, references and goal.</p></div>
+      <div class="step"><div class="num">02</div><strong>Edit</strong><p>Build the structure, pacing, captions, visuals and sound.</p></div>
+      <div class="step"><div class="num">03</div><strong>Review</strong><p>You review the first version and share feedback.</p></div>
+      <div class="step"><div class="num">04</div><strong>Deliver</strong><p>Final polish and delivery in the format you need.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="eyebrow">Have a project?</div>
+      <h2>Let's make something worth watching.</h2>
+      <p>Send me your footage, content type and editing requirements. I'll get back to you with the next steps.</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email me</a>
+        <a class="btn" href="https://www.reddit.com/" target="_blank" rel="noopener">Reddit</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Ganga Durga Prasad</span>
+  <span>Freelance Video Editor</span>
+</footer>
+</body>
+</html>
